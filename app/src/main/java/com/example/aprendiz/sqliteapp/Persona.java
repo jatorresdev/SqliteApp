@@ -6,17 +6,21 @@ package com.example.aprendiz.sqliteapp;
 public class Persona {
     private int documento;
     private String nombre;
+    private String apellido;
     private int contacto;
+    private String email;
 
     // Constructor
-    public Persona(){
+    public Persona() {
         super();
     }
 
-    public Persona(int documento, String nombre, int contacto){
+    public Persona(int documento, String nombre, String apellido, int contacto, String email) {
         this.setDocumento(documento);
         this.setNombre(nombre);
+        this.setApellido(apellido);
         this.setContacto(contacto);
+        this.setEmail(email);
     }
 
     public int getDocumento() {
@@ -41,5 +45,21 @@ public class Persona {
 
     public void setContacto(int contacto) {
         this.contacto = contacto;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
