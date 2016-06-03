@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="documento">Documento</string>
+    <string name="nombre">Nombre</string>
+    <string name="contacto">Contacto</string>
+    <string name="guardar">Guardar</string>
+</resources>
