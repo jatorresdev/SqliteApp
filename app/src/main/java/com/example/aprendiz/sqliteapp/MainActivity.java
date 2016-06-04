@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mostrarLista (View my){
-        Intent intent = new Intent(getApplicationContext(), Buscar.class);
-        startActivity(intent);
+        Intent i = new Intent(this, Buscar.class);
+        startActivity(i);
     }
 
     public void limpiarCampos() {
