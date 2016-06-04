@@ -2,6 +2,7 @@ package com.example.aprendiz.sqliteapp;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -52,5 +53,16 @@ public class MyBDSqlite extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         db.insert(DATABASE_TABLE, null, values);
         db.close();
+    }
+
+    public Cursor buscarPersonas() {
+        SQLiteDatabase db = getWritableDatabase();
+        String query = "SELECT * FROM " + DATABASE_TABLE;
+        Cursor c = db.rawQuery(query, null);
+        if (c == null) {
+            return null;
+        } else {
+            return c;
+        }
     }
 }

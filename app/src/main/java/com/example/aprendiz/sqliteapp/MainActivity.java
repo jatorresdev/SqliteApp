@@ -1,5 +1,6 @@
 package com.example.aprendiz.sqliteapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
         database.agregarPersona(persona);
 
         limpiarCampos();
+    }
+
+    public void mostrarLista (View my){
+        Intent intent = new Intent(getApplicationContext(), Buscar.class);
+        startActivity(intent);
     }
 
     public void limpiarCampos() {

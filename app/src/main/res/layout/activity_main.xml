@@ -73,9 +73,8 @@
         android:text="@string/guardar"
         android:id="@+id/btn_guardar"
         android:onClick="onClickAgregar"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="61dp" />
+        android:layout_below="@+id/et_email"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -112,4 +111,13 @@
         android:layout_below="@+id/textView5"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/et_contacto" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mostar"
+        android:id="@+id/btn_mostrar"
+        android:onClick="mostrarLista"
+        android:layout_below="@+id/et_email"
+        android:layout_alignEnd="@+id/et_email" />
 </RelativeLayout>

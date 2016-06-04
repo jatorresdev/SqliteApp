@@ -6,4 +6,5 @@
     <string name="contacto">Contacto</string>
     <string name="email">E-mail</string>
     <string name="guardar">Guardar</string>
+    <string name="mostar">Mostrar lista</string>
 </resources>

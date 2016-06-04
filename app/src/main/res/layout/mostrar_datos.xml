@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/lista_datos"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/et_documento" />
+
+    <TextView
+        android:id="@+id/et_documento"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="10dp"
+        android:layout_toStartOf="@+id/et_nombre"
+        android:text="@string/documento"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/et_nombre"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_above="@+id/lista_datos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="21dp"
+        android:text="@string/nombre"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/et_contacto"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/et_nombre"
+        android:layout_marginEnd="27dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/contacto"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+</RelativeLayout>
