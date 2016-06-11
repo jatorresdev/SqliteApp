@@ -18,12 +18,13 @@ public class Buscar extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mostrar_datos);
-        lista = (ListView) findViewById(R.id.lista_datos);
         base = new MyBDSqlite(this);
         bd = base.getWritableDatabase();
         Cursor cursor = base.buscarPersonas();
-        lista.setTextFilterEnabled(true);
         final TodoCursorAdapter todoCursorAdapter = new TodoCursorAdapter(this, cursor);
+
+        lista = (ListView) findViewById(R.id.lista_datos);
         lista.setAdapter(todoCursorAdapter);
+        lista.setTextFilterEnabled(true);
     }
 }

@@ -12,9 +12,9 @@ import android.widget.TextView;
  * Created by APRENDIZ on 03/06/2016.
  */
 public class TodoCursorAdapter extends CursorAdapter {
-    TextView documento, nombre, contacto;
+    TextView documento, nombre, apellido, contacto, email;
     int vdocumento, vcontacto;
-    String vnombre;
+    String vnombre, vapellido, vemail;
 
     public TodoCursorAdapter(Context context, Cursor cursor) {
         super(context, cursor, 0);
@@ -29,14 +29,21 @@ public class TodoCursorAdapter extends CursorAdapter {
     public void bindView(View view, Context context, Cursor cursor) {
         documento = (TextView) view.findViewById(R.id.et_documento);
         nombre = (TextView) view.findViewById(R.id.et_nombre);
+        apellido = (TextView) view.findViewById(R.id.et_apellido);
         contacto = (TextView) view.findViewById(R.id.et_contacto);
-        vdocumento = cursor.getInt(cursor.getColumnIndex("documento"));
+        email = (TextView)  view.findViewById(R.id.et_email);
+
+        vdocumento = cursor.getInt(cursor.getColumnIndex("_id"));
         vnombre = cursor.getString(cursor.getColumnIndex("nombre"));
+        vapellido = cursor.getString(cursor.getColumnIndex("apellido"));
         vcontacto = cursor.getInt(cursor.getColumnIndex("contacto"));
+        vemail = cursor.getString(cursor.getColumnIndex("email"));
 
         documento.setText(String.valueOf(vdocumento));
         nombre.setText(vnombre);
+        apellido.setText(vapellido);
         contacto.setText(String.valueOf(vcontacto));
+        email.setText(String.valueOf(vemail));
     }
 
 }

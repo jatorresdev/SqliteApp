@@ -13,7 +13,7 @@ public class MyBDSqlite extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "persona.db";
     private static final String DATABASE_TABLE = "persona";
-    private static final String COLUMNA_DOCUMENTO = "documento";
+    private static final String COLUMNA_DOCUMENTO = "_id";
     private static final String COLUMNA_NOMBRE = "nombre";
     private static final String COLUMNA_APELLIDO = "apellido";
     private static final String COLUMNA_CONTACTO = "contacto";
