@@ -16,6 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Buscar" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".PreModificar" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Modificar" android:parentActivityName=".PreModificar"></activity>
     </application>
 
 </manifest>

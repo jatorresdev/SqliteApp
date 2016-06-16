@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/documento"
+        android:textSize="@dimen/texto_general"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/txt_documento"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre"
+        android:id="@+id/textView2"
+        android:textSize="@dimen/texto_general"
+        android:layout_below="@+id/txt_documento"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txt_nombre"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignStart="@+id/txt_documento" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apellido"
+        android:id="@+id/textView4"
+        android:textSize="@dimen/texto_general"
+        android:layout_below="@+id/txt_nombre"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txt_apellido"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_alignStart="@+id/txt_nombre" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contacto"
+        android:id="@+id/textView3"
+        android:textSize="@dimen/texto_general"
+        android:layout_below="@+id/txt_apellido"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/txt_contacto"
+        android:layout_below="@+id/txt_apellido"
+        android:layout_alignStart="@+id/txt_apellido" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:id="@+id/textView5"
+        android:textSize="@dimen/texto_general"
+        android:layout_below="@+id/txt_contacto"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/txt_email"
+        android:layout_below="@+id/txt_contacto"
+        android:layout_alignStart="@+id/txt_contacto" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/modificar"
+        android:id="@+id/btn_modificar"
+        android:onClick="confirmarModificar"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="123dp" />
+
+</RelativeLayout>

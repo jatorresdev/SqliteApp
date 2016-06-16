@@ -118,6 +118,15 @@
         android:text="@string/mostar"
         android:id="@+id/btn_mostrar"
         android:onClick="mostrarLista"
-        android:layout_below="@+id/et_email"
-        android:layout_alignEnd="@+id/et_email" />
+        android:layout_alignTop="@+id/btn_guardar"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buscar"
+        android:id="@+id/btn_buscar"
+        android:onClick="modificar"
+        android:layout_alignTop="@+id/btn_mostrar"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

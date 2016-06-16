@@ -42,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void modificar(View my) {
+        Intent i = new Intent(this, PreModificar.class);
+        startActivity(i);
+    }
+
     public void limpiarCampos() {
         documento.setText("");
         nombre.setText("");

@@ -65,4 +65,25 @@ public class MyBDSqlite extends SQLiteOpenHelper {
             return c;
         }
     }
+
+    public Cursor buscarPersonaModificar(int id){
+        SQLiteDatabase db = getWritableDatabase();
+        String query = "SELECT * FROM " + DATABASE_TABLE + " WHERE " + COLUMNA_DOCUMENTO + " = " + id + ";";
+        Cursor c = db.rawQuery(query,null);
+        if (c != null){
+            c.moveToFirst();
+        }
+
+        return c;
+    }
+
+    public void modificarPersona(Persona persona){
+        ContentValues values = new ContentValues();
+        values.put(COLUMNA_DOCUMENTO,persona.getDocumento());
+        values.put(COLUMNA_NOMBRE,persona.getNombre());
+        values.put(COLUMNA_CONTACTO, persona.getContacto());
+        SQLiteDatabase bd =  getWritableDatabase();
+        bd.update(DATABASE_TABLE,values, COLUMNA_DOCUMENTO + " = ?",new String[]{String.valueOf(persona.getDocumento())});
+        bd.close();
+    }
 }
