@@ -30,19 +30,19 @@ public class TodoCursorAdapter extends CursorAdapter {
         documento = (TextView) view.findViewById(R.id.et_documento);
         nombre = (TextView) view.findViewById(R.id.et_nombre);
         apellido = (TextView) view.findViewById(R.id.et_apellido);
-        contacto = (TextView) view.findViewById(R.id.et_contacto);
+        //contacto = (TextView) view.findViewById(R.id.et_contacto);
         email = (TextView)  view.findViewById(R.id.et_email);
 
         vdocumento = cursor.getInt(cursor.getColumnIndex("_id"));
         vnombre = cursor.getString(cursor.getColumnIndex("nombre"));
         vapellido = cursor.getString(cursor.getColumnIndex("apellido"));
-        vcontacto = cursor.getInt(cursor.getColumnIndex("contacto"));
+        //vcontacto = cursor.getInt(cursor.getColumnIndex("contacto"));
         vemail = cursor.getString(cursor.getColumnIndex("email"));
 
         documento.setText(String.valueOf(vdocumento));
         nombre.setText(vnombre);
         apellido.setText(vapellido);
-        contacto.setText(String.valueOf(vcontacto));
+        //contacto.setText(String.valueOf(vcontacto));
         email.setText(String.valueOf(vemail));
     }
 

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         limpiarCampos();
     }
 
-    public void mostrarLista (View my){
+    public void mostrarLista(View my) {
         Intent i = new Intent(this, Buscar.class);
         startActivity(i);
     }

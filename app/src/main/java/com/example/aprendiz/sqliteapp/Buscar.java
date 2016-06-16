@@ -1,15 +1,15 @@
 package com.example.aprendiz.sqliteapp;
 
-import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 /**
  * Created by APRENDIZ on 03/06/2016.
  */
-public class Buscar extends Activity {
+public class Buscar extends AppCompatActivity {
     MyBDSqlite base;
     ListView lista;
     SQLiteDatabase bd;
@@ -18,6 +18,7 @@ public class Buscar extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mostrar_datos);
+
         base = new MyBDSqlite(this);
         bd = base.getWritableDatabase();
         Cursor cursor = base.buscarPersonas();

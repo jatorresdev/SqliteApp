@@ -13,16 +13,16 @@
 
     <TextView
         android:id="@+id/et_documento"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="20dp"
         android:text="@string/documento"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/et_nombre"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="20dp"
-        android:layout_marginLeft="21dp"
+        android:layout_marginLeft="20dp"
         android:text="@string/nombre"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_alignParentTop="true"
@@ -30,31 +30,22 @@
 
     <TextView
         android:id="@+id/et_apellido"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="20dp"
-        android:layout_marginLeft="21dp"
+        android:layout_marginLeft="20dp"
         android:text="@string/apellido"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:id="@+id/et_contacto"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="@string/contacto"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/et_email"
-        android:layout_marginEnd="34dp" />
+        android:layout_toEndOf="@id/et_nombre" />
 
     <TextView
         android:id="@+id/et_email"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="20dp"
+        android:layout_marginLeft="20dp"
         android:text="@string/email"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/et_apellido" />
 </RelativeLayout>
