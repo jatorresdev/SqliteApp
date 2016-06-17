@@ -37,11 +37,10 @@ public class Modificar extends AppCompatActivity {
         Cursor c = base.buscarPersonaModificar(vdocumento);
 
         //Cargamos los datos del cursor a nuestra interface
-        //@todo: revisar
-        documento.setText(c.getInt(c.getColumnIndexOrThrow("_id")));
+        documento.setText(c.getString(c.getColumnIndexOrThrow("_id")));
         nombre.setText(c.getString(c.getColumnIndexOrThrow("nombre")));
         apellido.setText(c.getString(c.getColumnIndexOrThrow("apellido")));
-        contacto.setText(c.getInt(c.getColumnIndexOrThrow("contacto")));
+        contacto.setText(c.getString(c.getColumnIndexOrThrow("contacto")));
         email.setText(c.getString(c.getColumnIndexOrThrow("email")));
     }
 
